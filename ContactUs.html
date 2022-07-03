@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="CSS/ContactUs.css" />
+    <link rel="stylesheet" href="ContactUs.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,16 +14,56 @@
     <link
       rel="icon"
       type="image/x-icon"
-      href="Images/favicon.ico"
+      href="/Assignment/Images/favicon.ico"
     />
     <title>LOUGOU - Contact Us</title>
   </head>
   <body>
+    <script>
+      function FormValidation() {
+      
+      var fullname = document.getElementById("fullname").value;
+      var email = document.getElementById("email").value;
+      var description = document.getElementById("description").value;
+      var orderNumber = /^[0-9A-Za-z]{6}-[0-9A-Za-z]{6}$/.test(document.getElementById("orderNumber").value)
+      var productNumber = /^[0-9A-Za-z]{5}-[0-9A-Za-z]{1}$/.test(document.getElementById("product").value)
+
+      if ((orderNumber && !productNumber) || 
+      (!orderNumber && !productNumber) || 
+      (!orderNumber && productNumber))
+      {
+        document.getElementById("orderNumber").style.border = "1px solid red";
+        document.getElementById("product").style.border = "1px solid red";
+        alert("Please Check Order Number and Product Number")
+      } else {
+        document.getElementById("orderNumber").style.border = "";
+        document.getElementById("product").style.border = "";
+
+        if (fullname && email && description){
+          alert("Thank You For Contacting Us ! ");
+          document.getElementById("email").style.border = "";
+          document.getElementById("fullname").style.border = "";
+          document.getElementById("description").style.border = "";
+        } else if ((fullname && !email && !description) || 
+          (!fullname && !email && description) || 
+          (!fullname && email && !description) || 
+          (fullname && email && !description) || 
+          (!fullname && email && description) || 
+          (!fullname && !email && !description)){
+            alert("Please Enter All Information");
+            document.getElementById("email").style.border = "1px solid red";
+            document.getElementById("fullname").style.border = "1px solid red";
+            document.getElementById("description").style.border = "1px solid red";
+        }
+      }
+    }
+    </script>
     <header class="white">
-      <a href="index.html">
-        <img src="Images/LOUGOU.webp" alt="Logo"
+      <a href="/Assignment/index.html">
+        <img src="/Assignment/Images/LOUGOU.webp" alt="Logo"
       /></a>
       <nav>
+        
         <ul>
           <li><a href="index.html">HOME</a></li>
 
@@ -45,7 +85,7 @@
             <a class="dropbtn">EN &#9660;</a>
 
             <div class="dropdown-content">
-              <a href="ChinesePage/indexCN.html">CN</a>
+              <a href="/Assignment/ChinesePage/indexCN.html">CN</a>
             </div>
           </li>
         </ul>
@@ -69,7 +109,7 @@
           Holidays).​
         </p>
       </div>
-      <form id="jsform" name="js_form" onSubmit="return FormValidation()">
+      <form id="jsform" name="js_form">
         <div>
           <p>Customer Service Form</p>
           <table>
@@ -84,8 +124,8 @@
                   id="fullname"
                   size="50"
                   placeholder="Enter Your Full Name"
-                />
-                <span class="error">Please Enter Your Name</span>
+                /><br>
+                <span id="nameError"></span>
               </td>
             </tr>
             <tr>
@@ -100,7 +140,8 @@
                   size="50"
                   placeholder="Your Email Address"
                 />
-                <span class="error">Please Enter Your Email</span>
+                <br>
+                <span id="emailError"></span>
               </td>
             </tr>
             <tr>
@@ -122,9 +163,11 @@
                   rows="4"
                   cols="50"
                   name="description"
+                  id="description"
                   placeholder="Describe the problems you are facing"
                 ></textarea>
-                <span class="error">Please Describe Your Problem</span>
+                <br>
+                <span class="DescribeError"></span>
               </td>
             </tr>
             <tr>
@@ -136,6 +179,7 @@
                   type="text"
                   name="order"
                   size="50"
+                  id="orderNumber"
                   placeholder="A2JEGW-3TAEF4"
                 />
               </td>
@@ -167,7 +211,7 @@
             </tr>
             <tr>
               <td class="buttonAlign">
-                <button>Submit</button>
+                <input type="button" value="Submit" id="input" onclick="FormValidation()">
               </td>
               <td></td>
             </tr>
@@ -217,7 +261,7 @@
       </div>
     </footer>
     <script
-      src="JavaScripts/validaton.js"
+      src="/Assignment/JavaScripts/validaton.js"
     ></script>
   </body>
 </html>

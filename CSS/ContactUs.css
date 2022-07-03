@@ -153,6 +153,7 @@ ul {
     transform: translateX(100%);
   }
   
+  
   button 
   {
     display: block;
@@ -192,6 +193,13 @@ ul {
   }
 
   #input{
-    background-color: transparent;
-    border:none;
+    background-color: red;
+    border:1px solid;
+    display: block;
+    width: 100%;
   }
+  input:hover{
+    cursor: pointer;
+  }
+
+
