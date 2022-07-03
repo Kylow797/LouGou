@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="CSS/ContactUs.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="Images/favicon.ico"
+    />
+    <title>LOUGOU - Contact Us</title>
+  </head>
+  <body>
+    <header class="white">
+      <a href="index.html">
+        <img src="Images/LOUGOU.webp" alt="Logo"
+      /></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+
+          <li><a href="about.html">ABOUT</a></li>
+
+          <li class="dropdown">
+            <a class="dropbtn">BRANDS &#9660;</a>
+
+            <div class="dropdown-content">
+              <a href="men.html">Men's</a>
+              <a href="women.html">Women's</a>
+              <a href="kids.html">Kids'</a>
+            </div>
+          </li>
+
+          <li><a href="faq.html">FAQ</a></li>
+
+          <li class="dropdown">
+            <a class="dropbtn">EN &#9660;</a>
+
+            <div class="dropdown-content">
+              <a href="ChinesePage/indexCN.html">CN</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <b id="b">Contact Us</b>
+      <div>
+        <p>Our Customer Care Team are here to help, you can contact us:​</p>
+        <br />
+        <address>
+          By email:​<br />
+          Our email address is
+          <a href="mailto:customercare@lougou.my​ ">
+            customercare@lougou.my​
+          </a>
+        </address>
+        <br />
+        <p>
+          9:00 AM – 1:00 PM, 2:00 PM – 5:00PM (Mondays to Fridays, except Public
+          Holidays).​
+        </p>
+      </div>
+      <form id="jsform" name="js_form" onSubmit="return FormValidation()">
+        <div>
+          <p>Customer Service Form</p>
+          <table>
+            <tr>
+              <td>
+                <b><label>Full Name</label></b>
+              </td>
+              <td class="alignInfo">
+                <input
+                  type="text"
+                  name="fullname"
+                  id="fullname"
+                  size="50"
+                  placeholder="Enter Your Full Name"
+                />
+                <span class="error">Please Enter Your Name</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b><label>Email Address</label></b>
+              </td>
+              <td class="alignInfo">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  size="50"
+                  placeholder="Your Email Address"
+                />
+                <span class="error">Please Enter Your Email</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b><label for="subject">Subject</label></b>
+              </td>
+              <td class="alignInfo">
+                <select name="subject" id="subject">
+                  <option>Please choose a topic</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td id="allign">
+                <b><label>Description</label></b>
+              </td>
+              <td class="alignInfo">
+                <textarea
+                  rows="4"
+                  cols="50"
+                  name="description"
+                  placeholder="Describe the problems you are facing"
+                ></textarea>
+                <span class="error">Please Describe Your Problem</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b><label>Order Number</label></b>
+              </td>
+              <td class="alignInfo">
+                <input
+                  type="text"
+                  name="order"
+                  size="50"
+                  placeholder="A2JEGW-3TAEF4"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b><label for="product">Product Number</label></b>
+              </td>
+              <td class="alignInfo">
+                <input
+                  type="text"
+                  name="product"
+                  id="product"
+                  size="50"
+                  placeholder="K2816-2"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><b>Attach File</b></td>
+              <td class="alignInfo">
+                <input
+                  type="file"
+                  name="attachment"
+                  id="attachment"
+                  size="50"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td class="buttonAlign">
+                <button>Submit</button>
+              </td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </form>
+    </main>
+    <footer>
+      <table>
+        <thead>
+          <tr>
+            <td class="whiteLine"></td>
+            <th id="brands">BRANDS</th>
+            <th id="about">ABOUT</th>
+            <th id="CustCare">CUSTOMER CARE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td headers="brands"><a href="Men.html">Men's</a></td>
+            <td headers="about"><a href="#">Brand's Philosophy</a></td>
+            <td headers="CustCare"><a href="FAQ.html">FAQ</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td headers="brands"><a href="Women.html">Women's</a></td>
+            <td headers="about"><a href="TheTeam.html">The Team</a></td>
+            <td headers="CustCare"><a href="ContactUs.html">Contact Us</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td headers="brands"><a href="Kids.html">Kids'</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <div class="footerInner">2022 &copy; LOUGOU</div>
+      <div class="footerInner">
+        <a href="#"><span class="fab fa-facebook-f"></span></a>
+      </div>
+      <div class="footerInner">
+        <a href="copyright.html">Copyright</a> <a href="T&C.html">T&C</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </footer>
+    <script
+      src="JavaScripts/validaton.js"
+    ></script>
+  </body>
+</html>

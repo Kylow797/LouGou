@@ -1,0 +1,161 @@
+@import url(../CSS/Nav.css);
+
+header{
+  font: menu;
+  background-image: url(../Images/indexHeroImage.webp);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 60px;
+  background-attachment: fixed;
+  transition: 0.5s ease-in-out;
+}
+p{
+  padding-left: 10%;
+  font-size: 5em;
+}
+#logo{
+  padding-left: 10%;
+}
+div {
+    text-align: center;
+  }
+
+  .newShoes{
+    width: 70%;
+    height: auto;
+    border: 5px solid #222A35;
+    background-size: cover;
+  }
+  body{
+    background-color: #222A35;
+    font-family: 'Inter', sans-serif, 'Montserrat', sans-serif;
+  }
+
+  .white{
+    background-color:white;
+  }
+
+  .redFont{
+    color: red;
+  }
+  .whiteFont{
+    color: white;
+  }
+
+  #redCaption{
+    font-size: xx-large;
+    font-weight: bold;
+    color: red;
+    border: none;
+  }
+  #whiteCaption{
+    font-size: xx-large;
+    font-weight: bold;
+    color: white;
+    border: none;
+  }
+
+  main div a{
+    padding-top: 20px;
+    color: red;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+
+  main div a:hover{
+    color: white;
+    cursor: pointer;
+    border-radius: 80%;
+  }
+  #men{
+    display: inline-block;
+    height: 300px;
+    margin: 10px;
+    width: 25%;
+    background-image: url(../Images/menshoes/men.webp);
+    background-size: cover;
+  }
+  #women{
+    display: inline-block;
+    height: 300px;
+    margin: 10px;
+    width: 25%;
+    background-image: url(../Images/womenshoes/women.webp);
+    background-size: cover;
+  }
+  #kids{
+    display: inline-block;
+    height: 300px;
+    margin: 10px;
+    width: 25%;
+    background-image: url(../Images/kids/shoes/kids2.2.webp);
+    background-size: cover;
+  }
+
+  .newInner{
+    display: inline-block;
+    width: 40%;
+    height: 250px;
+  }
+
+  .footerInner{
+    display: inline-block;
+    width: 32%;
+    border: none;
+  }
+  
+  footer{
+    margin-left: 5%;
+    border-top: 2px white solid;
+    color: white;
+  }
+  footer table{
+    
+    text-align: left;
+    width: 80%;
+  }
+
+   @media (max-width: 450px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        top: 100px;
+        justify-content: center;
+        text-align: center;
+        background-image: none;
+    }
+    p{
+      display: none;
+    }
+    #logo {
+        flex-direction: column;
+    }
+    nav{
+      flex-direction: column;
+      padding: 0;
+      width: 100%;
+    }
+    #men{
+      display: block;
+      width: 100%;
+        height: 250px;
+    }
+    #women{
+      display: block;
+      width: 100%;
+      height: 250px;
+    }
+    #kids{
+      display: block;
+      width: 100%;
+      height: 250px;
+    }
+    .newShoes{
+      width: 100%;
+      border: none;
+    }
+
+    footer{
+      font-size: small;
+    }
+} 
