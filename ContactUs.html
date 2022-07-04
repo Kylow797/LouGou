@@ -14,12 +14,12 @@
     <link
       rel="icon"
       type="image/x-icon"
-      href="/Assignment/Images/favicon.ico"
+      href="favicon.ico"
     />
     <title>LOUGOU - Contact Us</title>
   </head>
   <body>
-    <script>
+    <script type="text/javascript">
       function FormValidation() {
       
       var fullname = document.getElementById("fullname").value;
@@ -28,22 +28,17 @@
       var orderNumber = /^[0-9A-Za-z]{6}-[0-9A-Za-z]{6}$/.test(document.getElementById("orderNumber").value)
       var productNumber = /^[0-9A-Za-z]{5}-[0-9A-Za-z]{1}$/.test(document.getElementById("product").value)
 
-      if ((orderNumber && !productNumber) || 
-      (!orderNumber && !productNumber) || 
-      (!orderNumber && productNumber))
-      {
-        document.getElementById("orderNumber").style.border = "1px solid red";
-        document.getElementById("product").style.border = "1px solid red";
-        alert("Please Check Order Number and Product Number")
-      } else {
-        document.getElementById("orderNumber").style.border = "";
-        document.getElementById("product").style.border = "";
-
-        if (fullname && email && description){
-          alert("Thank You For Contacting Us ! ");
+      if (fullname && email && description){
           document.getElementById("email").style.border = "";
           document.getElementById("fullname").style.border = "";
           document.getElementById("description").style.border = "";
+          
+          if(orderNumber && productNumber) {
+              alert("Thank You For Contacting Us ! ");
+              document.getElementById("orderNumber").style.border = "";
+              document.getElementById("product").style.border = "";
+            }
+
         } else if ((fullname && !email && !description) || 
           (!fullname && !email && description) || 
           (!fullname && email && !description) || 
@@ -54,13 +49,21 @@
             document.getElementById("email").style.border = "1px solid red";
             document.getElementById("fullname").style.border = "1px solid red";
             document.getElementById("description").style.border = "1px solid red";
+
+            if ((orderNumber && !productNumber) || 
+            (!orderNumber && !productNumber) || 
+            (!orderNumber && productNumber))
+            {
+              document.getElementById("orderNumber").style.border = "1px solid red";
+              document.getElementById("product").style.border = "1px solid red";
+              alert("Please Check Order Number and Product Number");
+            } 
         }
-      }
     }
     </script>
     <header class="white">
-      <a href="index.html">
-        <img src="/Assignment/Images/LOUGOU.webp" alt="Logo"
+      <a href="/Assignment/index.html">
+        <img src="LOUGOU.webp" alt="Logo"
       /></a>
       <nav>
         
@@ -213,7 +216,6 @@
               <td class="buttonAlign">
                 <input type="button" value="Submit" id="input" onclick="FormValidation()">
               </td>
-              <td></td>
             </tr>
           </table>
         </div>
@@ -223,6 +225,7 @@
       <table>
         <thead>
           <tr>
+            <td class="whiteLine"></td>
             <th id="brands">BRANDS</th>
             <th id="about">ABOUT</th>
             <th id="CustCare">CUSTOMER CARE</th>
@@ -230,30 +233,32 @@
         </thead>
         <tbody>
           <tr>
-            <td headers="brands"><a href="men.html">Men's</a></td>
-            <td headers="about"><a href="about.html">Brand's Philosophy</a></td>
-            <td headers="CustCare"><a href="faq.html">FAQ</a></td>
+            <td headers="brands"><a href="Men.html">Men's</a></td>
+            <td headers="about"><a href="#">Brand's Philosophy</a></td>
+            <td headers="CustCare"><a href="FAQ.html">FAQ</a></td>
           </tr>
           <tr>
-            <td headers="brands"><a href="women.html">Women's</a></td>
+            <td headers="brands"><a href="Women.html">Women's</a></td>
             <td headers="about"><a href="TheTeam.html">The Team</a></td>
             <td headers="CustCare"><a href="ContactUs.html">Contact Us</a></td>
           </tr>
           <tr>
-            <td headers="brands"><a href="kids.html">Kids'</a></td>
-            <td></td>
-            <td></td>
+            <td headers="brands"><a href="Kids.html">Kids'</a></td>
           </tr>
         </tbody>
       </table>
       <br />
       <div class="footerInner">2022 &copy; LOUGOU</div>
       <div class="footerInner">
+        <a href="#"><span class="fab fa-facebook-f"></span></a>
+      </div>
+      <div class="footerInner">
         <a href="copyright.html">Copyright</a> <a href="T&C.html">T&C</a>
         <a href="privacy.html">Privacy</a>
       </div>
     </footer>
     <script
+      type="text/javascript"
       src="/Assignment/JavaScripts/validaton.js"
     ></script>
   </body>
