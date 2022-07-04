@@ -29,8 +29,8 @@
       var productNumber = /^[0-9A-Za-z]{5}-[0-9A-Za-z]{1}$/.test(document.getElementById("product").value)
 
       if (fullname && email && description){
-          document.getElementById("email").style.border = "";
           document.getElementById("fullname").style.border = "";
+          document.getElementById("email").style.border = "";
           document.getElementById("description").style.border = "";
           
           if(orderNumber && productNumber) {
@@ -46,8 +46,8 @@
           (!fullname && email && description) || 
           (!fullname && !email && !description)){
             alert("Please Enter All Information");
-            document.getElementById("email").style.border = "1px solid red";
             document.getElementById("fullname").style.border = "1px solid red";
+            document.getElementById("email").style.border = "1px solid red";
             document.getElementById("description").style.border = "1px solid red";
 
             if ((orderNumber && !productNumber) || 
