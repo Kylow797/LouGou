@@ -14,7 +14,7 @@
     <link
       rel="icon"
       type="image/x-icon"
-      href="/Assignment/Images/favicon.ico"
+      href="Images/favicon.ico"
     />
     <title>LOUGOU - Contact Us</title>
   </head>
@@ -28,22 +28,17 @@
       var orderNumber = /^[0-9A-Za-z]{6}-[0-9A-Za-z]{6}$/.test(document.getElementById("orderNumber").value)
       var productNumber = /^[0-9A-Za-z]{5}-[0-9A-Za-z]{1}$/.test(document.getElementById("product").value)
 
-      if ((orderNumber && !productNumber) || 
-      (!orderNumber && !productNumber) || 
-      (!orderNumber && productNumber))
-      {
-        document.getElementById("orderNumber").style.border = "1px solid red";
-        document.getElementById("product").style.border = "1px solid red";
-        alert("Please Check Order Number and Product Number")
-      } else {
-        document.getElementById("orderNumber").style.border = "";
-        document.getElementById("product").style.border = "";
-
-        if (fullname && email && description){
-          alert("Thank You For Contacting Us ! ");
+      if (fullname && email && description){
           document.getElementById("email").style.border = "";
           document.getElementById("fullname").style.border = "";
           document.getElementById("description").style.border = "";
+          
+          if(orderNumber && productNumber) {
+              alert("Thank You For Contacting Us ! ");
+              document.getElementById("orderNumber").style.border = "";
+              document.getElementById("product").style.border = "";
+            }
+
         } else if ((fullname && !email && !description) || 
           (!fullname && !email && description) || 
           (!fullname && email && !description) || 
@@ -54,13 +49,21 @@
             document.getElementById("email").style.border = "1px solid red";
             document.getElementById("fullname").style.border = "1px solid red";
             document.getElementById("description").style.border = "1px solid red";
+
+            if ((orderNumber && !productNumber) || 
+            (!orderNumber && !productNumber) || 
+            (!orderNumber && productNumber))
+            {
+              document.getElementById("orderNumber").style.border = "1px solid red";
+              document.getElementById("product").style.border = "1px solid red";
+              alert("Please Check Order Number and Product Number");
+            } 
         }
-      }
     }
     </script>
     <header class="white">
       <a href="index.html">
-        <img src="/Assignment/Images/LOUGOU.webp" alt="Logo"
+        <img src="Images/LOUGOU.webp" alt="Logo"
       /></a>
       <nav>
         
@@ -85,7 +88,7 @@
             <a class="dropbtn">EN &#9660;</a>
 
             <div class="dropdown-content">
-              <a href="/Assignment/ChinesePage/indexCN.html">CN</a>
+              <a href="ChinesePage/indexCN.html">CN</a>
             </div>
           </li>
         </ul>
@@ -254,7 +257,7 @@
       </div>
     </footer>
     <script
-      src="/Assignment/JavaScripts/validaton.js"
+      src="JavaScripts/validaton.js"
     ></script>
   </body>
 </html>
